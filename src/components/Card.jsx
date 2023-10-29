@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Card(props) {
   return (
@@ -10,9 +11,24 @@ function Card(props) {
       <div className="bottom">
         <p className="info">{props.tel}</p>
         <p className="info">{props.email}</p>
+        
       </div>
+      <a
+          href={props.linkedin}
+          target="_blank"
+        >
+          LinkedIn profile
+        </a>
     </div>
   );
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  tel: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  linkedin: PropTypes.string.isRequired,
+};
 
 export default Card;
