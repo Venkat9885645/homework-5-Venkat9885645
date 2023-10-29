@@ -13,6 +13,7 @@ function App() {
           img={contact.imgURL}
           tel={contact.phone}
           email={contact.email}
+          linkedin={contact.linkedin}
         />
       ))}
     </div>
